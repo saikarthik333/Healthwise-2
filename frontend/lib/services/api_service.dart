@@ -24,4 +24,62 @@ class ApiService {
       throw Exception("Failed to get prediction");
     }
   }
+
+  static Future<List<String>> fetchSymptoms() async {
+  final url = Uri.parse("$baseUrl/api/symptoms");
+
+  final response = await http.get(url);
+
+  if (response.statusCode == 200) {
+    final data = jsonDecode(response.body);
+    return List<String>.from(data["symptoms"]);
+  } else {
+    throw Exception("Failed to load symptoms");
+  }
+}
+
+static Future<List<dynamic>> fetchDoctors(String location) async {
+  final url = Uri.parse("$baseUrl/api/doctors");
+
+  final response = await http.post(
+    url,
+    headers: {"Content-Type": "application/json"},
+    body: jsonEncode({"location": location}),
+  );
+
+  if (response.statusCode == 200) {
+    final data = jsonDecode(response.body);
+    return data["doctors"];
+  } else {
+    throw Exception("Failed to fetch doctors");
+  }
+}
+
+
+static Future<List<int>> downloadReport({
+  required List<String> symptoms,
+  required String disease,
+  required String specialist,
+  required List remedies,
+}) async {
+  final url = Uri.parse("$baseUrl/api/report");
+
+  final response = await http.post(
+    url,
+    headers: {"Content-Type": "application/json"},
+    body: jsonEncode({
+      "symptoms": symptoms,
+      "disease": disease,
+      "specialist": specialist,
+      "remedies": remedies,
+    }),
+  );
+
+  if (response.statusCode == 200) {
+    return response.bodyBytes;
+  } else {
+    throw Exception("Failed to download report");
+  }
+}
+
 }
