@@ -8,6 +8,8 @@ based on user-selected symptoms using a machine learning model.
 The project demonstrates end-to-end integration of a Flutter frontend
 with a Flask REST API backend.
 
+Refer HealthWise-1 here https://github.com/saikarthik333/Healthwise
+
 ---
 
 ## Features
@@ -135,3 +137,4 @@ B.Tech CSE (ML Specialization)
 - PDF health report generation
 - User authentication
 - Cloud deployment
+
