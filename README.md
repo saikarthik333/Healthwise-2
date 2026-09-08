@@ -5,7 +5,7 @@ AI Symptom Checker & Doctor Locator
 
 Healthwise-2 is a full-stack mobile application that predicts possible diseases
 based on user-selected symptoms using a machine learning model.
-The project demonstrates end-to-end integration of a Flutter frontend
+The project demonstrates end-to-end integration of Flutter frontend
 with a Flask REST API backend.
 
 Refer HealthWise-1 here https://github.com/saikarthik333/Healthwise
