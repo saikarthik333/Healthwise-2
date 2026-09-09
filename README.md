@@ -17,7 +17,7 @@ Refer HealthWise-1 here https://github.com/saikarthik333/Healthwise
 - Select multiple symptoms from the mobile app
 - Real-time disease prediction using Machine Learning
 - Recommended medical specialist
-- General remedies and precautions
+- General remedies with precautions
 - REST API based backend architecture
 - Cross-platform Flutter frontend
 
