@@ -127,7 +127,7 @@ substitute for professional medical advice.
 ## Author
 
 Motapothula Sai Karthik  
-B.Tech CSE (ML Specialization)
+saikarthikmotapothula333@gmail.com
 
 ---
 
